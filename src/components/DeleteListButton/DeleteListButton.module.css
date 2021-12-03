@@ -1,0 +1,26 @@
+.delete_button {
+  border-radius: 5px;
+  position: absolute;
+  z-index: 50;
+  background-color: #fd5d5d;
+  height: 40px;
+  width: 130px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 14px 30px 14px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 160px;
+  top: 40px;
+  cursor: pointer;
+}
+
+.delete_button p {
+  color: #f0f0f0;
+}
+/*# sourceMappingURL=DeleteListButton.module.css.map */
