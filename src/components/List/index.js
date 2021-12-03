@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import { DragDropContext } from "react-beautiful-dnd";
 import DeleteListButton from "../DeleteListButton/index.js";
 import ListItem from "../ListItem/index.js";
 import styles from "./List.module.scss";
@@ -8,6 +7,8 @@ export default function List(props) {
   const [listTitle, setListTitle] = useState("");
   const [createList, setCreateList] = useState(true);
   const [deleteButtonVisible, setDeleteButtonVisible] = useState(false);
+
+  //tableau d'objets
   const [listItems, setListItems] = useState([]);
   const [listItemsKey, setListItemsKey] = useState(0);
   const toggleDeleteButton = () => {
@@ -15,6 +16,8 @@ export default function List(props) {
   };
 
   //supprimer tâches
+  //Pour supprimer des éléments du tableau, on a utilisé la méthode filter
+  //Filter retourne un nouveau tableau qui remplissent une condition déterminée
   const deleteListItem = (id) => {
     console.log("supprimer", id);
     setListItems((listItems) =>
@@ -22,6 +25,8 @@ export default function List(props) {
     );
   };
 
+  //fonction qui se charge de réordonner le tableau de list items, ici on a utilisé la méthode splice
+  //pour modifier le contenu de l'array.
   const reorder = (list, startIndex, endIndex) => {
     const result = [...list];
     const [removed] = result.splice(startIndex, 1);
@@ -30,30 +35,27 @@ export default function List(props) {
     return result;
   };
 
-  //lorsqu'on lâche la souris, ça déclenche le useState setListItems
+  //Fonction onDrop qui est déclenché lorsqu'on lâche un élément;
+  //Quand elle est lancé le code récupère la key et le id de l'élément déplacé et stock dans des variables;
   const onDrop = (event) => {
     event.preventDefault();
     const currentKey = event.dataTransfer.getData("key");
     const targetKey = event.target.id;
-    console.log("currentKey", currentKey);
-    console.log("targetKey", targetKey);
 
     setListItems((listItems) => {
-      console.log("reorder", reorder(listItems, currentKey, targetKey));
       return reorder(listItems, currentKey, targetKey);
     });
   };
 
   //creer tâches dans une liste
+  //auto-increment +1 pour générer les keys
   const createListItem = () => {
     const newListItems = [...listItems, { key: listItemsKey }];
 
     setListItems(newListItems);
     setListItemsKey(listItemsKey + 1);
   };
-
-  console.log("listItems", listItems);
-
+  //boolean checkList set à true de base
   if (createList) {
     return (
       <li className={styles.list_wrapper}>
