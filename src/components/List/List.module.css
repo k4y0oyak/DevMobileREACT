@@ -17,7 +17,7 @@
 .list_wrapper input {
   border-radius: 5px;
   -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
   border: none;
   outline: none;
   padding: 0 10px;
@@ -28,7 +28,7 @@
 
 .list_wrapper input:focus {
   -webkit-box-shadow: 0px 0px 0.5px 2px #0079bf;
-          box-shadow: 0px 0px 0.5px 2px #0079bf;
+  box-shadow: 0px 0px 0.5px 2px #0079bf;
 }
 
 .list_wrapper .list_title_input {
@@ -51,14 +51,14 @@
 
 .list_wrapper textarea:focus {
   -webkit-box-shadow: 0px 0px 0.5px 2px #0079bf;
-          box-shadow: 0px 0px 0.5px 2px #0079bf;
+  box-shadow: 0px 0px 0.5px 2px #0079bf;
   font-weight: 400;
 }
 
 .list_wrapper .button_primary {
   background-color: #0079bf;
   -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
   color: #f0f0f0;
   border-radius: 5px;
   width: 70px;
@@ -70,8 +70,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-left: 10px;
   cursor: pointer;
 }
@@ -81,8 +81,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
   margin-top: 20px;
   margin-bottom: 10px;
@@ -99,4 +99,3 @@
   margin-left: 10px;
   padding-left: 20px;
 }
-/*# sourceMappingURL=List.module.css.map */

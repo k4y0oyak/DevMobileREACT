@@ -6,8 +6,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .list_container {
@@ -18,8 +18,8 @@
   overflow-x: scroll;
   height: 96%;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  -ms-flex-align: start;
+  align-items: start;
   -ms-overflow-style: none;
   scrollbar-width: none;
   -webkit-user-select: none;
@@ -46,4 +46,3 @@
 .list_container::-webkit-scrollbar-corner {
   background-color: transparent;
 }
-/*# sourceMappingURL=App.module.css.map */

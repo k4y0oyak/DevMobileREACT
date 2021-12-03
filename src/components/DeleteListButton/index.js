@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import styles from "./DeleteListButton.module.scss";
 
+// Fonction permettant la suppression des listes
+
 export default function DeleteListButton(props) {
   return (
     <button
       className={styles.delete_button}
       onClick={() => props.handleDelete(props.id)}
+      // OnClick déclenche la suppression de la liste quand le bouton est cliqué
     >
       <svg
         width="22"

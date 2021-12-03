@@ -3,8 +3,8 @@ header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .container {
@@ -14,10 +14,10 @@ header {
   padding: 10px 20px;
   border-radius: 5px;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 150px;
   background-color: rgba(255, 255, 255, 0.2);
   cursor: pointer;
@@ -31,4 +31,3 @@ header {
   width: 20px;
   height: 20px;
 }
-/*# sourceMappingURL=Header.module.css.map */

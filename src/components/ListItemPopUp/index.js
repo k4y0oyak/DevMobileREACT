@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styles from "./ListItemPopUp.module.scss";
 
+// Fonctions permettant la personnalisation de la pop up de Card
+
 export default function ListItemPopUp(props) {
   const [listItemTitleModified, setListItemTitleModified] = useState("");
   const [listItemDescriptionModified, setListItemDescriptionModified] =
@@ -13,6 +15,7 @@ export default function ListItemPopUp(props) {
   const saveListItem = () => {
     if (listItemTitleModified !== props.listItemTitle) {
       props.setListItemTitle(listItemTitleModified);
+      // si le titre de la pop-up à été modifié -> alors ça affiche le titre avec les modifs
     } else {
       props.setListItemBanner(props.listItemBanner);
       props.setListItemTitle(props.listItemTitle);
@@ -20,9 +23,11 @@ export default function ListItemPopUp(props) {
   };
   const unsavePopup = () => {
     props.setOpenPopUp(false);
+    // props false -> annule la propriété setOpenPopUp -> pop-up se ferme
     if (props.listItemDescription !== listItemDescriptionModified) {
       props.setListItemDescription(props.listItemDescription);
     }
+    // si la description a été modifiée -> alors ça n'enregistre pas les modifs
   };
 
   const printImg = (e) => {
@@ -32,6 +37,7 @@ export default function ListItemPopUp(props) {
       }
     });
     reader.readAsDataURL(e.target.files[0]);
+    // fonction permettant l'ajout de fichiers image dans la pop-up
   };
 
   return (
@@ -40,6 +46,7 @@ export default function ListItemPopUp(props) {
         className={styles.behind_popup}
         onClick={() => {
           unsavePopup();
+          // OnClick déclenche l'annulation de la maj de la pop-up quand on clique en dehors de la pop-up
         }}
       ></div>
       <div className={styles.list_item_popup}>
@@ -48,6 +55,7 @@ export default function ListItemPopUp(props) {
           onClick={() => {
             unsavePopup();
           }}
+          // OnClick déclenche l'annulation de la maj de la pop-up quand la croix est cliquée
         >
           <svg
             width="28"
@@ -88,10 +96,12 @@ export default function ListItemPopUp(props) {
           <input
             id="files"
             onChange={(e) => printImg(e)}
+            // OnChange déclenche la maj de de l'image quand l'input change
             type="file"
             size="50"
             title="Image"
           />
+          {/* label + input -> bouton permettant l'ajout d'images */}
         </div>
         {props.listItemBanner && (
           <div className={styles.list_item_image}>
@@ -122,6 +132,7 @@ export default function ListItemPopUp(props) {
               saveListItem();
               props.setListItemDescription(listItemDescriptionModified);
               props.setOpenPopUp(false);
+              // OnClick -> enregistre les modifs et ferme la pop-up
             }}
           >
             Save

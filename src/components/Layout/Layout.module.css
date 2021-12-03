@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 h1,
@@ -47,4 +47,3 @@ button {
   background-position: center;
   background-size: cover;
 }
-/*# sourceMappingURL=Layout.module.css.map */

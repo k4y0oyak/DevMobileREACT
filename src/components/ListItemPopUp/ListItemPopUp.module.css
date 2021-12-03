@@ -13,7 +13,7 @@
   top: 50%;
   right: 50%;
   -webkit-transform: translate(50%, -50%);
-          transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
   background-color: #f0f0f0;
   border-radius: 5px;
   width: 75vw;
@@ -24,8 +24,8 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   overflow: scroll;
 }
 
@@ -85,7 +85,7 @@
 .list_item_popup .bottom_content .button_primary {
   background-color: #0079bf;
   -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
   color: #f0f0f0;
   border-radius: 5px;
   padding: 0 20px;
@@ -97,4 +97,3 @@
   display: block;
   text-align: center;
 }
-/*# sourceMappingURL=ListItemPopUp.module.css.map */
